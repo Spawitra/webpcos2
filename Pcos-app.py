@@ -87,9 +87,9 @@ def user_input_features():
   features = pd.DataFrame(pipe, index=[0])
   return features
 
+app = joblib.load(open('PcosApp.joblib', 'rb'))
 
 
-app  = load('PcosApp.joblib') 
 
 
 name = ['''negative
