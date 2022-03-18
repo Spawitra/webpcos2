@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
+import joblib
+import pillow
 from joblib import dump, load
-from PIL import Image
+from pillow import Image
 
 HairG = Image.open("unknown (1).png")
 Skindarken = Image.open("unknown.png")
