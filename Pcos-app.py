@@ -3,8 +3,8 @@ import pandas as pd
 from joblib import dump, load
 from PIL import Image
 
-HairG = Image.open("/content/drive/Shareddrives/สัมนาภาวะถุงน้ำในรังไข่หลายใบ/webphoto/unknown (1).png")
-Skindarken = Image.open("/content/drive/Shareddrives/สัมนาภาวะถุงน้ำในรังไข่หลายใบ/webphoto/unknown.png")
+HairG = Image.open("unknown (1).png")
+Skindarken = Image.open("unknown.png")
 
 
 
