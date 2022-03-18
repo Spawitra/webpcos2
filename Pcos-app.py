@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 import pillow
 from joblib import dump, load
-from pillow import Image
+from PIL import Image
 
 HairG = Image.open("unknown (1).png")
 Skindarken = Image.open("unknown.png")
