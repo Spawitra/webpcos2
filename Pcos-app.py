@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
-import PIL
+import pillow
 from joblib import dump, load
 from PIL import Image
 
