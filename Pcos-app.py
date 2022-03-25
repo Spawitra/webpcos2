@@ -37,9 +37,7 @@ def user_input_features():
   CycleLength= st.sidebar.slider('ระยะห่างของรอบเดือน ห่างกันกี่วัน',0,60,16)
   st.sidebar.write('ระยะห่างของรอบเดือน', CycleLength, 'วัน') 
   st.sidebar.write('--------------------------------------------------------------------')
-
   st.sidebar.write('### เลข 0 คือ ไม่  เลข คือ 1ใช่')
-
   hairGrowth = st.sidebar.slider('ขนเพิ่มขึ้นตามจุดต่างๆ หรือไม่ ',0,1,1)
   st.sidebar.write('ขนเพิ่มขึ้นตามภาพ', hairGrowth)
   st.sidebar.image(HairG, use_column_width = True) 
@@ -89,7 +87,7 @@ def user_input_features():
   features = pd.DataFrame(pipe, index=[0])
   return features
 
-app = load(open('PcosApp.joblib', 'rb'))
+app  = load('PcosApp.joblib')
 
 name = ['''negative
 
