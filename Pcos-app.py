@@ -4,8 +4,8 @@ import joblib
 from joblib import dump, load
 from PIL import Image
 
-HairG = Image.open("unknown (1).png")
-Skindarken = Image.open("unknown.png")
+HairG = Image.open("hairgrowP.jpg")
+Skindarken = Image.open("skin darkenP.jpg")
 
 
 
@@ -122,22 +122,7 @@ st.write(prediction_proba)
 
 st.write('''รบกวนทำแบบสอบถามประสิทธิภาพของแบบทดสอบ
  ว่ามีการประเมินได้ถูกต้องมากแค่ไหน ''')
+st.write('https://forms.gle/u7GK9hvWkpWjJjaD9')
 
 
 
-if st.button('Say hello'):
-     st.write('Why hello there')
-else:
-  st.write('Goodbye')
-
-
-st.sidebar.caption('''อ้างอิง 
- [1]  Ferriman-Gallwey
- https://www.researchgate.net/figure/Modified-Ferriman-Gallwey-Score-mFG-score-10_fig1_335003295
- [2] รูปที่ 5แสดงผิวหนังหนาตัว acanthosisnigrican บริเวณต้นคอและรักแร้
- https://he01.tci-thaijo.org/index.php/jmhs/article/view/61311
-
-
-
-  
-  ''')
