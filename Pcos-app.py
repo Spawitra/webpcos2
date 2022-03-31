@@ -133,7 +133,7 @@ st.write(prediction_proba)
 
 st.write('''รบกวนทำแบบสอบถามประสิทธิภาพของแบบทดสอบ
  ว่ามีการประเมินได้ถูกต้องมากแค่ไหน ''')
-st.write('https://forms.gle/u7GK9hvWkpWjJjaD9')
+st.write(' ### https://forms.gle/u7GK9hvWkpWjJjaD9')
 
 
 
