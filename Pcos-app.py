@@ -26,7 +26,7 @@ def user_input_features():
   
   Age = st.sidebar.slider('อายุเท่าไหร่',0,100,22)
   st.sidebar.write('อายุ', Age,'ปี')
-  st.sidebar.write(<*font color=‘red’>--------------------------------------------------------------------</*font>)
+  st.sidebar.write(<*font color=‘red’>'--------------------------------------------------------------------'</*font>)
   Weight= st.sidebar.slider('น้ำหนัก (Kg)เท่าไหร่',0,150,79)
   st.sidebar.write('น้ำหนัก', Weight, 'กิโลกรัม')
   st.sidebar.write('--------------------------------------------------------------------')
