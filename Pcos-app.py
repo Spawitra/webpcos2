@@ -112,7 +112,7 @@ name = ['''negative
 *ควร เลี่ยงทานอาหารที่มีไขมันสูง*
 และพบแพทย์ผู้เชี่ยวชาญสำหรับการวินิจฉัยโรคต่อไป
 ''']
-risk = ['โอกาสเสี่ยงน้อย', 'โอกาสเสี่ยงมาก']
+
 df = user_input_features()
 
 st.subheader('ทำการประเมินความเสี่ยง')
@@ -127,7 +127,7 @@ st.subheader('ผลการทำนาย (Prediction)')
 st.write(name[prediction[0]])
 
 st.subheader('เปอร์เซ็นความเสี่ยง (Prediction Probability)')
-st.write(risk)
+st.write('โอกาสเสี่ยงน้อย', 'โอกาสเสี่ยงมาก')
 st.write(prediction_proba)
 
 
