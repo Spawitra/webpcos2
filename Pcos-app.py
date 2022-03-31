@@ -80,7 +80,7 @@ def user_input_features():
   st.sidebar.write('น้ำหนักเพิ่มขึ้น', WeightGain)
   st.sidebar.write(' # --------------------------------------')
   st.sidebar.write('--------------------------------------------------------------------')
-  col1 = st.columns([1, 11])
+  
   pipe =  { 'Age (yrs)': Age,
              'Weight (Kg)': Weight, 
              'Cycle(R/I)': Cycle,
@@ -95,7 +95,7 @@ def user_input_features():
 
   features = pd.DataFrame(pipe, index=[0])
   return features
-col1.write(pipe)
+
 app  = load('PcosApp.joblib')
 
 name = ['''negative
