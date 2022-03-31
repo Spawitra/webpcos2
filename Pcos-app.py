@@ -13,7 +13,7 @@ Skindarken = Image.open("skin darkenP.jpg")
 
 st.write(""" ## แอปประเมินความเสี่ยง ว่าคุณจะมีความเสี่ยงเป็นโรคถุงน้ำในรังไข่หลายใบหรือไม่
 
-<<< แบบสอบถาม
+<<< แบบประเมินความเสี่ยง
 """)
 
 
@@ -37,11 +37,10 @@ def user_input_features():
   st.sidebar.write('ระยะห่างของรอบเดือน', CycleLength, 'วัน') 
   st.sidebar.write('--------------------------------------------------------------------')
   st.sidebar.write('### เลข 0 คือ ไม่  เลข คือ 1ใช่')
-  hairGrowth = st.sidebar.slider('ขนเพิ่มขึ้นตามจุดต่างๆ หรือไม่ ',0,1,1)
-  st.sidebar.write('สังเกตุตามจุดต่างๆบนร่างกาย ว่ามีขนเพิ่มขึ้นหรือไม่', hairGrowth)
+  hairGrowth = st.sidebar.slider('สังเกตุตามจุดต่างๆบนร่างกาย ว่ามีขนเพิ่มขึ้นหรือไม่ ',0,1,1)
   st.sidebar.caption('''เช่น จากไม่มีขนเลย เพิ่มขึ้นไประดับ1 หรือ มีขนที่ระดับ3แล้วเพิ่มขึ้นไประดับ4 ''')
-  st.sidebar.image(HairG, use_column_width = True) 
- 
+  st.sidebar.write('ขนเพิ่มขึ้นหรือไม่', hairGrowth)
+  st.sidebar.image(HairG, use_column_width = True)
   st.sidebar.write('--------------------------------------------------------------------')
 
   SkinDarkening= st.sidebar.slider('ผิวดำคล้ำตามข้อต่างๆหรือไม่',0,1,0)
