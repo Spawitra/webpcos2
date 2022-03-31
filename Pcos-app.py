@@ -128,7 +128,7 @@ st.write(name[prediction[0]])
 
 st.subheader('เปอร์เซ็นความเสี่ยง (Prediction Probability)')
 st.write('โอกาสเสี่ยงน้อย', 'โอกาสเสี่ยงมาก')
-st.write(prediction_proba)
+st.write(prediction_proba[risk[0]])
 
 
 st.write('''รบกวนทำแบบสอบถามประสิทธิภาพของแบบทดสอบ
