@@ -59,7 +59,7 @@ def user_input_features():
 
   Fastfood= st.sidebar.slider('รับประทานอาหารที่มีไขมันสูง (Fastfood) ',0,1,0)
   st.sidebar.write('ทานอาหารที่มีไขมันสูงหรือไม่', Fastfood)
-  st.sidebar.caption('ชอบ')
+  st.sidebar.caption('ชอบรับประทานอาหารที่มีไขมันสูง หรือ ทานบ่อยครั้ง')
   st.sidebar.write(' # --------------------------------------')
   
 
