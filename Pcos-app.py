@@ -129,11 +129,13 @@ st.subheader('ผลการทำนาย (Prediction)')
 st.write(name[prediction[0]])
 
 st.subheader('เปอร์เซ็นความเสี่ยง (Prediction Probability)')
-st.write('โอกาสเสี่ยงน้อย','|',  'โอกาสเสี่ยงมาก')
+st.write('โอกาสไม่เป็นโรค','|',  'โอกาสเป็นโรค')
 st.write(prediction_proba)
 
+with st.expander('''รบกวนทำแบบสอบถามการใช้งานเว็บไซต์'''):
+     st.write("""
+         แบบสอบถามประสิทธิภาพของแบบทดสอบ วามีการประเมินได้ถูกต้องมากแค่ไหน
+     """)
+     st.write("https://forms.gle/u7GK9hvWkpWjJjaD9")
 
-st.write('''รบกวนทำแบบสอบถามประสิทธิภาพของแบบทดสอบ
- ว่ามีการประเมินได้ถูกต้องมากแค่ไหน ''')
-st.write(' ### https://forms.gle/u7GK9hvWkpWjJjaD9')
 
