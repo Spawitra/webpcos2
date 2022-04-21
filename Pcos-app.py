@@ -15,6 +15,12 @@ st.header("""แอปพลิเคชั่น
 """)
 st.write('<<< หากไม่พบแบบประเมิน คลิกลูกศรมุมซ้ายบนเพื่อเปิดทำการประเมินความเสี่ยง')
 
+st.error('''แบบประเมินความเสี่ยง เป็นเพียงการประเมินความเสี่ยงเบื้อต้น มิใช้การวินิจฉัยจากแพทย์ หากการประเมินพบว่ามีความเสี่ยง 
+         ท่านสามารถไปปรึกษาหรือเข้าพบแพทย์ผู้เชี่ยวชาญ คลินิกนรีเวชกรรม หรือ คลินิกสูติ-นรีเวช  
+         ตามโรงพยาบาลใกล้บ้าน เพื่อทำการสอบถามหรือ ทำการรักษาต่อไป
+         ศึกษาเกี่ยวกับโรคเพิ่มเติม  https://www.bangkokhospital.com/content/overweight-women-are-more-likely-to-face-polycystic-ovary-syndrome
+         ''') 
+
 st.sidebar.header('แบบประเมินความเสี่ยงโรคถุงน้ำรังไข่หลายใบ')
 st.sidebar.subheader('กรอกข้อมูล')
 st.sidebar.write('--------------------------------------------------------------------')
@@ -108,29 +114,38 @@ name = ['''negative
 
 
 สามรถดูแลสุขภาพตนเอง  โดยการออกกำลังกาย และรับทานอาหารครบ 5 หมู่
-*ควร เลี่ยงทานอาหารที่มีไขมันสูง*  และพบแพทย์ผู้เชี่ยวชาญสำหรับการวินิจฉัยโรคต่อไป 
-ศึกษาเกี่ยวกับโรคเพิ่มเติม  
-https://www.bangkokhospital.com/content/overweight-women-are-more-likely-to-face-polycystic-ovary-syndrome
-
-
+*ควร เลี่ยงทานอาหารที่มีไขมันสูง*  และพบแพทย์ผู้เชี่ยวชาญสำหรับการวินิจฉัยโรค และการรักษาต่อไป
 ''']
+
 
 df = user_input_features()
 
 st.subheader('ทำการประเมินความเสี่ยง')
 st.write(df)
 
+
 prediction = app.predict(df)
 prediction_proba = app.predict_proba(df)
+submit = st.button('ทำการประเมินความเสี่ยง')
+if submit:
+
+    st.subheader('ผลการทำนาย (Prediction)')
+    if prediction[0]:
+        
+        st.error(name[1])   
+
+    else:
+        st.success(name[0])
 
 
-st.subheader('ผลการทำนาย (Prediction)')
-#st.write([prediction])
-st.write(name[prediction[0]])
 
-st.subheader('เปอร์เซ็นความเสี่ยง (Prediction Probability)')
-st.write('โอกาสไม่เป็นโรค','|',  'โอกาสเป็นโรค')
-st.write(prediction_proba)
+    st.subheader('เปอร์เซ็นความเสี่ยง (Prediction Probability)')
+    st.write('โอกาสเสี่ยงน้อย','|',  'โอกาสเสี่ยงมาก')
+    st.write(prediction_proba)
+
+
+       
+
 
 with st.expander('''รบกวนทำแบบสอบถามการใช้งานเว็บไซต์'''):
      st.write("""
