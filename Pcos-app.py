@@ -15,10 +15,14 @@ st.header("""แอปพลิเคชั่น
 """)
 st.write('<<< หากไม่พบแบบประเมิน คลิกลูกศรมุมซ้ายบนเพื่อเปิดทำการประเมินความเสี่ยง')
 
-st.error('''แบบประเมินความเสี่ยง เป็นเพียงการประเมินความเสี่ยงเบื้อต้น มิใช้การวินิจฉัยจากแพทย์ หากการประเมินพบว่ามีความเสี่ยง 
-         ท่านสามารถไปปรึกษาหรือเข้าพบแพทย์ผู้เชี่ยวชาญ คลินิกนรีเวชกรรม หรือ คลินิกสูติ-นรีเวช  
-         ตามโรงพยาบาลใกล้บ้าน เพื่อทำการสอบถามหรือ ทำการรักษาต่อไป
-         ศึกษาเกี่ยวกับโรคเพิ่มเติม  https://www.bangkokhospital.com/content/overweight-women-are-more-likely-to-face-polycystic-ovary-syndrome
+st.error('''แบบประเมินความเสี่ยง เป็นเพียงการประเมินความเสี่ยงเบื้อต้น
+        มิใช้การวินิจฉัยจากแพทย์ หากการประเมินพบว่ามีความเสี่ยง 
+        ท่านสามารถไปปรึกษาหรือเข้าพบแพทย์ผู้เชี่ยวชาญ
+        ได้ที่คลินิกนรีเวชกรรม หรือ คลินิกสูติ-นรีเวช ตามโรงพยาบาลใกล้บ้าน
+        เพื่อสอบถามหรือทำการรักษาต่อไป         
+        ศึกษาเกี่ยวกับโรคเพิ่มเติม  
+        
+        https://www.bangkokhospital.com/content/overweight-women-are-more-likely-to-face-polycystic-ovary-syndrome
          ''') 
 
 st.sidebar.header('แบบประเมินความเสี่ยงโรคถุงน้ำรังไข่หลายใบ')
@@ -82,6 +86,9 @@ def user_input_features():
   st.sidebar.caption('น้ำหนักเพิ่มขึ้นแบบรวดเร็วหรือไม่ เช่น จาก60เพิ่มไป 70 ในระยะเวลาสั้นๆ')
   st.sidebar.write('น้ำหนักเพิ่มขึ้น', WeightGain)
   st.sidebar.write(' # --------------------------------------')
+  st.sidebar.caption('Ferriman D, Gallwey JD: Clinical assessment of body hair growth in women. Journal of Clinical Endocrinology 1961; 21:1440–1447.')
+
+
   
   
   pipe =  { 'Age (yrs)': Age,
