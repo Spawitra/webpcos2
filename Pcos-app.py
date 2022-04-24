@@ -8,7 +8,7 @@ HairG = Image.open("hairgrowP.jpg")
 Skindarken = Image.open("skin darkenP.jpg")
 
 
-st.header("""แอปพลิเคชั่น
+st.header("""แอปพลิเคชัน
 ## ประเมินความเสี่ยงโรคถุงน้ำรังไข่หลายใบ
 
 ว่าคุณจะมีความเสี่ยงเป็นโรคถุงน้ำในรังไข่หลายใบหรือไม่
@@ -51,11 +51,13 @@ def user_input_features():
   st.sidebar.caption('''สังเกตตามจุดต่างๆบนร่างกาย ว่ามีขนเพิ่มขึ้นหรือไม่ เช่น จากไม่มีขนเลย เพิ่มขึ้นไประดับ1 หรือ มีขนที่ระดับ3แล้วเพิ่มขึ้นไประดับ4 ''')
   st.sidebar.write('ขนเพิ่มขึ้นหรือไม่', hairGrowth)
   st.sidebar.image(HairG, use_column_width = True)
+  st.sidebar.caption('ภาพที่ 1 ตารางการเกิดขน Ferriman')
   st.sidebar.write(' # --------------------------------------')
   
   SkinDarkening= st.sidebar.slider('ผิวดำคล้ำตามข้อต่างๆหรือไม่',0,1,0)
   st.sidebar.caption('ผิวคล้ำดำหนา ตามจุด ข้อนิ้ว ข้อศอก คอ หรือ รักแร้ เป็นต้น')
   st.sidebar.image(Skindarken, use_column_width = True)
+  st.sidebar.caption('ภาพที่ 2 จุดสังเกตผิวหนาคล้ำ')
   st.sidebar.write('ผิวดำคล้ำตามข้อต่างๆ', SkinDarkening)
   st.sidebar.write(' # --------------------------------------')
   
@@ -86,7 +88,10 @@ def user_input_features():
   st.sidebar.caption('น้ำหนักเพิ่มขึ้นแบบรวดเร็วหรือไม่ เช่น จาก60เพิ่มไป 70 ในระยะเวลาสั้นๆ')
   st.sidebar.write('น้ำหนักเพิ่มขึ้น', WeightGain)
   st.sidebar.write(' # --------------------------------------')
-  st.sidebar.caption('Ferriman D, Gallwey JD: Clinical assessment of body hair growth in women. Journal of Clinical Endocrinology 1961; 21:1440–1447.')
+  st.sidebar.caption('''[ภาพที่ 1] Ferriman D, Gallwey JD: Clinical assessment of body hair growth in women.
+                         Journal of Clinical Endocrinology 1961; 21:1440–1447.
+                         ''')
+  st.sidebar.caption('[ภาพที่ 2]วาดโดย P1(ปวิตรา สาริวงษ์)')  
 
 
   
