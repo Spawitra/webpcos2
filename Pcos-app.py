@@ -111,7 +111,7 @@ def user_input_features():
   features = pd.DataFrame(pipe, index=[0])
   return features
 
-app  = load('AppPcosL.joblib')
+app  = load('PcosApp.joblib')
 
 name = ['''negative
 
@@ -164,5 +164,6 @@ with st.expander('''รบกวนทำแบบสอบถามการใ
          แบบสอบถามประสิทธิภาพของแบบทดสอบ วามีการประเมินได้ถูกต้องมากแค่ไหน
      """)
      st.write("https://forms.gle/u7GK9hvWkpWjJjaD9")
+
 
 
